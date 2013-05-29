@@ -30,6 +30,6 @@ brew install boost --build-from-source --env=std
   end
 
   test do
-    brew test pykep
+    system "echo 'import PyKEP' | python"
   end
 end

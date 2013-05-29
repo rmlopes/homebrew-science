@@ -9,6 +9,14 @@ class Pykep < Formula
   env :std
   depends_on 'cmake' => :build
   depends_on 'boost' => :optional
+  option 'with-boost' , 'For compatibility with python distributions, boost dependency is optional.
+If you are using Apple or home-brewed python, and boost is not installed use:
+brew install pykep --with-boost
+
+If you are using other python distribution (for instance, pythonbrew) then you need to be sure that
+boost was built from the source and linked against that python. To build it use:
+brew install boost --build-from-source --env=std
+'
 
   def install
     Dir.mkdir "build"

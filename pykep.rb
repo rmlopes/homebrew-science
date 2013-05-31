@@ -26,6 +26,7 @@ Is it linked against the correct python?"
     Dir.mkdir "build"
     Dir.chdir "build" do
       ppath = ENV['PYTHONPATH']
+      ppath = ppath.split(":")[0]
       system "cmake",  "../", "-DBUILD_PYKEP=ON", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DPYTHON_LIBRARY:FILEPATH=#{ppath}/libpython2.7.dylib"
       system "make"
       system "make" ,"install" # if this fails, try separate make/make install steps

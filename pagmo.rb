@@ -2,8 +2,8 @@ require 'formula'
 
 class Pagmo < Formula
   homepage 'https://sourceforge.net/projects/pagmo/'
-  url 'http://sourceforge.net/code-snapshots/git/p/pa/pagmo/code.git/pagmo-code-13f3db11b7be920f30b3be459c8bf7cfeffaa37e.zip'
-  sha1 '5c21abfedac544392bcec4566e5018fba44515cb'
+  url 'http://git.code.sf.net/p/pagmo/code', :using => :git
+  version "1.1.4"
 
   env :std
 
